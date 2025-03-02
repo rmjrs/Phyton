@@ -1,0 +1,18 @@
+MARK_UP = 2.5
+another = "y" or "Y"
+#Use while loop and let y or Y be equal to have another item.
+while another == "y" or another == "y":
+  #GET THE ITEM'S WHOLESALE COST.
+  wholesale=float(input("Enter the item's wholesale cost: "))
+  #Validate the wholesale cost.
+  #Using repetition structure, use the continue and operation <= and this will
+  #ask the user to input again.
+  if wholesale<= -1:
+    print("ERROR! Input a valid item's wholesale cost again:\n ")
+    continue
+  #this is the formula to get the retail. wholesale multiply by mark_up
+  retail = wholesale*MARK_UP
+  #Print the retail price with 2 decimal place.
+  print(f'Retail price: Php {retail:,.2f}')
+  #This will continue the loop.
+  another = input("Do you have another item? (Enter y for Yes): ")
