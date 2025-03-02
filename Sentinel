@@ -1,0 +1,22 @@
+#Inform the doctor to put 0 if there are no more weight so the program can stop,
+#input 1 if the doctor wants to proceed.
+print("Enter 0 weight if there are no more weight.")
+weight = int(input("Hello, Doc! Please input 1 to proceed. "))
+add=0
+division=0
+#So if the doctor typed 1, the loop will proceed.
+  if weight == 1:
+  #But if the doctor typed 0, it will automatically stop. ask the doctor to
+  #input the weight now.
+    while weight!=0:
+      weight=float(input("Hello, Doc! Please input the patient's weight. "))
+      if weight == 0:
+        break
+        #use this operation to get the average. It will compute the inputs on by one.
+        add+=weight
+        division+=1
+        ave= add/division
+        #Lastly, inform the doctor what is the average weight of their patients.
+        #This will print everytime the doctor input a weight. Make it only 1
+        #decimal point.
+        print(f'The average is:, {ave:,.1f}')
