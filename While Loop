@@ -1,0 +1,28 @@
+# Problem Description: A junior magician has picked a secret number.
+#He has hidden it in a variable named secret_number. He wants everyone who
+#runs his program to play the Guess the secret number game, and guess what
+#number he has picked for them.
+#Those who don't guess the number will be stuck in an endless loop forever!
+# you can assign any number you want as the secret number
+secret_number = 18
+print(
+"""
++================================+
+| Welcome to my game, muggle! |
+| Enter an integer number |
+| and guess what number I've |
+| picked for you. |
+| So, what is the secret number? |
++================================+
+""")
+while True:
+  guess = int(input("What is the secret number? "))
+  if guess == secret_number:
+    print("Well done, muggle! You are free now.")
+    break
+else:
+  print("Ha ha! You're stuck in my loop!")
+#Use the while loop and break instruction.
+#Ask the user the secret number with input function.
+#Use if else, if the user input the value of secret number, she's free, else
+#she's stuck in the loop
