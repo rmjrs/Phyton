@@ -1,0 +1,34 @@
+# Problem Description:A junior magician has picked a secret number.
+#He has hidden it in a variable named secret_number. He wants everyone who
+#runs his program to play the Guess the secret number game, and guess what
+#number he has picked for them. There will only be 5 chances to guess the
+#secret number.
+#assign any number as the secret number
+secret_number = 6
+print(
+"""
++================================+
+| Welcome to my game, muggle! |
+| Enter an integer number |
+| and guess what number I've |
+| picked for you. |
+| So, what is the secret number? |
++================================+
+""")
+try:
+  guess = int(input("You have 3 chances to guess. What is the secret number, Muggle "))
+    for num in range (3,-1,-1):
+      print("HAHA! try again. You have", num ,"chances left!")
+      guess = int(input("Get it right this time, secret number? "))
+      if guess == secret_number:
+        print("Well done, muggle! You are free now.")
+        break
+      if num == 1:
+        print("Game over.")
+        break
+    except ValueError:
+      print("Try again. Enter a whole number.")
+#use the try function and for loop.
+#ask for the user's input and use the for loop and range function.
+#The num is the total number of chances, minus 1 every chances.
+#Use the break instruction for every statement and use except function if input is error
