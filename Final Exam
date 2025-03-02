@@ -1,0 +1,49 @@
+#Name: Mijares, Raianna Lhei M.
+#Subject & Sectiion: 6LogProg - EMC 101
+#Date: Oct 17, 2024
+
+#Objective: This is a budget analysis wherein the program ask the user what they have
+#budgeted for a month and it will tell them if they succeeded to meet their budget
+#or if they over/under budgeted.
+
+print("✧˖°.Hi! Welcome to Budget Analysis!✧˖°.")
+
+#ASk the user about the amout they have budgeted for a month. if the user input an
+#invalid number, the program will inform the user.
+while True:
+    try:
+        budget = float(input("\nPlease enter the amount you have budgeted for a month: "))
+        if budget < 0:
+            print("Budget has to be positive number. Try again.")
+        else:
+            break
+    except ValueError:
+        print("\nInvalid! Pleasse input a valid number.")
+
+#Always start the total expenses with 0.
+total_expenses = 0
+
+#Ask the user to enter their expenses and give them the option to stop the loop once
+#they are done.
+while True:
+    expense = input('''Enter an expense you got or type "finish" if you are done: ''')
+    if expense.lower () == "finish":
+        break
+    try:
+        expense = float(expense)
+        total_expenses += expense
+    except ValueError:
+        print("\nInvalid! Pleasse input a valid number for expense.")
+
+#This calculates the difference between the budget and the total expenses.
+bud_ex = budget - total_expenses
+
+#This will inform the user if they over budgeted, under budgeted or they met their
+#budget.
+if bud_ex > 0:
+    print(f"\nUNDER BUDGET by Php {bud_ex:.2f}")
+elif bud_ex < 0:
+    print(f"\nYou are OVER BUDGET by Php {abs(bud_ex):.2f}")
+else:
+    print("\nYou have MET your budget.")
+
